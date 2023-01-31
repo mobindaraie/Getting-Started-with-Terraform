@@ -1,0 +1,17 @@
+# Connect to postgres from ubuntu client
+https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-connect-server-vnet
+
+sudo apt-get update
+sudo apt-get install postgresql-client
+wget --no-check-certificate https://dl.cacerts.digicert.com/DigiCertGlobalRootCA.crt.pem
+
+psql "host=pg-dcp-dev.postgres.database.azure.com port=5432 dbname=postgres user=psqladmin password=H@Sh1CoR3! sslmode=require"
+
+CREATE TABLE accounts (
+	user_id serial PRIMARY KEY,
+	username VARCHAR ( 50 ) UNIQUE NOT NULL,
+	password VARCHAR ( 50 ) NOT NULL,
+	email VARCHAR ( 255 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+        last_login TIMESTAMP 
+);
