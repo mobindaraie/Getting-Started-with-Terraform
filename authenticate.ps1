@@ -2,8 +2,5 @@
 az login
 
 # Set the subscription
-az account set --subscription "Microsoft Sponsored - 1"
+az account set --subscription <Sub Name>
 
-
-# create PostgreSQL server using 
-az postgres flexible-server create --resource-group demoresourcegroup --name demoserverpostgres --vnet demoappvnet --location australiaeast
