@@ -5,8 +5,9 @@ sudo apt-get update
 sudo apt-get install postgresql-client
 wget --no-check-certificate https://dl.cacerts.digicert.com/DigiCertGlobalRootCA.crt.pem
 
-psql "host=pg-dcp-dev.postgres.database.azure.com port=5432 dbname=postgres user=psqladmin password=H@Sh1CoR3! sslmode=require"
+psql "host=pg-dcp-dev.postgres.database.azure.com port=5432 dbname=<PostgreSQL DB> user=<PostgreSQL User> password=<PostgreSQL Admin Password> sslmode=require"
 
+# Sample code to create a table
 CREATE TABLE accounts (
 	user_id serial PRIMARY KEY,
 	username VARCHAR ( 50 ) UNIQUE NOT NULL,
